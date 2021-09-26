@@ -1,0 +1,59 @@
+{
+  "name": "template.jslib.rollup",
+  "version": "0.0.1",
+  "description": "template js lib rollup",
+  "main": "rollup.config.js",
+  "scripts": {
+    "build": "npm run rollup:build",
+    "dev": "npm run rollup:dev",
+    "rollup:dev": "rollup -c -w",
+    "rollup:build": "rollup -c",
+    "test": "jest",
+    "lint": "eslint src test",
+    "lint:fix": "eslint src --fix",
+    "prepare": "husky install",
+    "log": "standard-changelog -f && git add CHANGELOG.md",
+    "commit": "commit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MShineRay/template-jslib-rollup.git"
+  },
+  "keywords": [
+    "template-jslib-rollup"
+  ],
+  "author": "mshineray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MShineRay/template-jslib-rollup/issues"
+  },
+  "homepage": "https://github.com/MShineRay/template-jslib-rollup#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.6",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/prompt-cli": "^12.1.4",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "babel-plugin-lodash": "^3.3.4",
+    "eslint": "^7.32.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.6",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
+    "rollup": "^2.56.2",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-uglify": "^6.0.4"
+  },
+  "engines": {
+    "node": ">=12.6.0 <=14.17.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:fix"
+    }
+  }
+}
